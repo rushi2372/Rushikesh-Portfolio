@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Helvetica', sans-serif;
+  color: #33b5ff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Hero Section */
+.App-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  color: #33b5ff;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Section Styles */
+section {
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Certifications List */
+.certifications ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.certifications li {
+  background: #333;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.certifications li:hover {
+  background: #33b5ff;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Experience Section */
+.experience ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.experience li {
+  background: #333;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experience li:hover {
+  background: #33b5ff;
+  transform: translateY(-5px);
+}
+
+.experience h3 {
+  font-size: 1.5rem;
+  color: #33b5ff;
+}
+
+/* Projects Section */
+.projects ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.projects li {
+  background: #333;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projects li:hover {
+  background: #33b5ff;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.projects h3 {
+  font-size: 1.5rem;
+  color: #33b5ff;
+}
+
+/* Contact Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input, .contact textarea {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #33b5ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #0295cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .certifications ul {
+    grid-template-columns: 1fr;
+  }
+
+  .experience ul {
+    grid-template-columns: 1fr;
+  }
+
+  .projects ul {
+    grid-template-columns: 1fr;
+  }
+
+  .contact input, .contact textarea {
+    width: 100%;
+  }
+}
